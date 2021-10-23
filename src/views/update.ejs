@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <base href="/">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+
+	</head>
+	<body>
+    <div id="add">
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/index" class="navbar-brand">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+          <%for(i=0;i<nav.length;i++){%>
+        <li>
+          <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+        </li>
+        <%}%>
+      </ul>
+      <div style="align-items:center;" id="log">
+        <a href="/" class="navbar-brand">Log Out</a>
+      </div> 
+ 
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1 style="color: white;">Add Book
+          <p class="lead"></p>
+        </h1>
+    
+     
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer"> </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+</div>
+
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-12"> 
+      
+      <div class="panel">
+        <div class="panel-body"> 
+         
+        
+       <div class="row">   
+            <div class="wrapper">
+             <br>
+             <h3 style="color: green;" id="msg"></h2>
+               <form method="POST" action="/admin/update/<%= Bookdata._id %>" enctype="multipart/form-data">
+                <div class="field title">
+                  <div class="input-area"> 
+                   
+                   Title  <input type="text" placeholder="Title" name="title"  value="<%= Bookdata.title %>">
+                    <i class="icon fas fa-user"></i>
+                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                  </div>
+                </div>
+                <br>
+                <div class="field author">
+                  <div class="input-area">
+                  Author  <input type="text" placeholder="Author" name="author" value="<%= Bookdata.author %>" >
+                    <i class="icon fas fa-lock"></i>
+                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                  </div>
+                  
+                </div>
+                <br>
+                <div class="field genre">
+                  <div class="input-area">
+                  Genre  <input type="text" placeholder="Genre" name="genre" value="<%= Bookdata.genre %>" >
+                    <i class="icon fas fa-lock"></i>
+                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                  </div>
+                  
+                </div>
+                <br>
+               
+                <div class="field image">
+                 
+                  <div class="input-area">
+                <br>
+                  Image:<input  id="imge" type="file" onchange="showFiles()" accept="image/*" name="image" value="<%= Bookdata.image %>" >
+                    <i class="icon fas fa-lock"></i>
+                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                  </div>
+                
+                </div>
+                <br>
+               <button class="button">Add Book</button>
+              
+              
+              </form>
+              
+            </div>  
+            
+          </div>
+          <!--/stories-->
+         
+      <!--  <div class="row">    
+           <form method="post" action="/admin/add">
+               Title: <input id="title" type="text" name="title"><br>
+               Author: <input id="authr" type="text" name="author"><br>
+               Genre: <input id="genre" type="text" name="genre"><br>
+               Image: <input id="imge" type="file" name="image">
+               <button class="button"  type="submit">Add</button>
+
+           </form>
+          </div>-->
+          
+         
+        
+          
+        
+      
+          </div>                                                                             
+	                                              
+      </div>                                               
+   	</div><!--/col-12-->
+  </div>
+</div>
+                                                
+                                                                                
+</div>
+<footer>
+  <div class="container">
+    <div class="row">
+     
+        <ul class="list-inline">
+          <li><i class="icon-facebook icon-2x"></i></li>
+          <li><i class="icon-twitter icon-2x"></i></li>
+          <li><i class="icon-google-plus icon-2x"></i></li>
+          <li><i class="icon-pinterest icon-2x"></i></li>
+        </ul>
+          
+        <p>Terms Of Use</p> 
+        <p>Privacy Policy</p> 
+      
+    </div>
+  </div>
+</footer>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+    <!--<script src="js/signin.js"></script>-->
+  
+	</body>
+</html>

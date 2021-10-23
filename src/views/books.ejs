@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+    <header class="navbar navbar-bright navbar-fixed-top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/index" class="navbar-brand">Home</a>
+        </div>
+        <nav class="collapse navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            
+            <%for(i=0;i<nav.length;i++){%>
+              <li>
+                <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+              </li>
+              <%}%>
+          </ul>
+          <div style="align-items:center;" id="log">
+            <a href="/" class="navbar-brand">Log Out</a>
+          </div> 
+     
+    </nav>
+  </div>
+</header>
+<div id="bks">
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1 style="color: black;">Books
+          <p class="lead"></p>
+        </h1>
+      </div>
+      
+              
+			
+            
+          </div>
+        </div>
+      </div>
+    
+  <!-- /cont -->
+  
+  
+
+
+<div class="container" id="booksinner">
+ 
+  <div class="row">
+    
+    <div class="col-md-12"> 
+      
+     <!-- <div class="panel">
+        <div class="panel-body">-->
+          
+          
+          
+          <!--/stories-->
+          <%for(i=0;i<books.length;i++){%>
+          <div class="col-md-4 mb-3">    
+           
+           
+            <div class="col-md-4 col-sm-3 text-center">
+              <a class="story-title" href="#"><img alt="" src="/uploads/<%=books[i].image%>"  style="width:200px;height:250px;" ></a>
+            </div>
+            
+            <div class="col-md-11 col-sm-8">
+              <h3 style="color: black;"><%=books[i].title%></h3>
+              <div class="row">
+                <div class="col-xs-9">
+                  <h4><span class="label label-default"><%=books[i].author%></span></h4><h4>
+                  <small style="font-family:courier,'new courier';"  class="text-muted"><%=books[i]. genre%> <br>    
+                  <a href="/books/<%=books[i]._id%>"  class="text-muted">Read More</a></small><br><br><br>
+                  </h4></div>
+                <div class="col-xs-3"></div>
+              </div>
+            
+            
+              <br><br><br>
+         </div>
+          </div>
+          <%}%>
+       
+            
+       
+      
+                                                                                       
+	      </div>                                           
+                                                 
+   	</div><!--/col-12-->
+  </div>
+</div>
+                                                
+
+<footer>
+ <div class="container">
+    <div class="row">
+     
+        <ul class="list-inline">
+          <li><i class="icon-facebook icon-2x"></i></li>
+          <li><i class="icon-twitter icon-2x"></i></li>
+          <li><i class="icon-google-plus icon-2x"></i></li>
+          <li><i class="icon-pinterest icon-2x"></i></li>
+        </ul>
+        
+      
+      
+        <p>Terms Of Use</p> 
+        <p>Privacy Policy</p> 
+    
+  
+ </div>
+</div>
+</footer>
+
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
